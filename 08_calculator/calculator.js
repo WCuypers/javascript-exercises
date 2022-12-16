@@ -33,9 +33,9 @@ const factorial = function(num) {
 	if (num == 0) {
     result = 1;
   } else {
-    while (num > 1) {
-      num--;
+    while (num >= 1) {
       result *= num;
+      num--;
     }
   }
   return result;

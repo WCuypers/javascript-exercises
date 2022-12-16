@@ -13,6 +13,7 @@ const sum = function(array) {
   for (const value of array) {
     result += value;
   }
+  return result;
 };
 
 const multiply = function() {

@@ -3,7 +3,7 @@ const convertToCelsius = function(fahrenheit) {
   return Math.round(celsius * 10) / 10;
 };
 
-const convertToFahrenheit = function(fahrenheit) {
+const convertToFahrenheit = function(celsius) {
   fahrenheit = celsius * 1.8 + 32;
   return Math.round(fahrenheit * 10) / 10;
 };

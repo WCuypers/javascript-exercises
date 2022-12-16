@@ -15,19 +15,23 @@ console.log(removeFromArray([1, 2, 3, 4], 2)); //only logs 2 values, not 3
 */
 
 
-const itemsToRemove = [];
 const removeFromArray = function() {
+    const itemsToRemove = [];
     let originalArray = arguments[0];
     for (let i = 1; i < arguments.length; i++) { //makes a new array with all items to remove
         itemsToRemove.push(arguments[i]);
-    }
+    };
     //!!write a loops that finds every item of itemsToRemove, finds its place in originalArray and removes it
-    for (const element of itemsToRemove) {
+    for (const item of itemsToRemove) {
     // for each value of itemsToRemove, find its index in originalArray
-        console.log(element);
+    let indexValue = originalArray.indexOf(item);
+    let valueFromArray = originalArray.splice (indexValue, 1);
     // use the index in originalArray to remove the item
-        
-    }
-}
+    };
+    return originalArray;
+};
 
 // V console testing
+// console.log(removeFromArray([1, 2, 3, 4, 5], 2, 3));
+
+module.exports = removeFromArray;

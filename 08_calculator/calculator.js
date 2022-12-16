@@ -8,18 +8,18 @@ const subtract = function(num1, num2) {
   return result;
 };
 
-const sum = function(array) {
+const sum = function(sumArray) {
   let result = 0;
-  for (const value of array) {
+  for (const value of sumArray) {
     result += value;
   }
   return result;
 };
 
-const multiply = function() {
-  result = arguments[0];
-  for (let i = 1; i <= arguments.lentgh; i++) {
-    result *= arguments[i];
+const multiply = function(multArray) {
+  let result = multArray[0];
+  for (let i = 1; i <= multArray.lentgh; i++) {
+    result = multArray[i] * result;
   }
   return result;
 };

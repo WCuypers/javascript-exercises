@@ -24,8 +24,9 @@ const multiply = function(multArray) {
   return result;
 };
 
-const power = function() {
-	
+const power = function(num1, num2) {
+	result = Math.pow(num1, num2);
+  return result;
 };
 
 const factorial = function() {

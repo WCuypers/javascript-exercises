@@ -1,10 +1,11 @@
 const fibonacci = function(index) {
-    result = 1;
+    let n1 = 0, n2 = 1, nextNumber;
     for (let i = 1; i <= index; i++) {
-        result += result;
-        console.log(result);
+        nextNumber = n1 + n2;
+        n1 = n2;
+        n2 = nextNumber;
     }
-    return result;
+    return n1;
 };
 
 // Do not edit below this line

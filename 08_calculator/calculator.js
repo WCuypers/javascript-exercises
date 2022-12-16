@@ -12,14 +12,14 @@ const sum = function(sumArray) {
   let result = 0;
   for (const value of sumArray) {
     result += value;
-  }
+  };
   return result;
 };
 
 const multiply = function(multArray) {
-  let result = multArray[0];
-  for (let i = 1; i <= multArray.lentgh; i++) {
-    result = multArray[i] * result;
+  let result = 1;
+  for (const value of multArray) {
+    result *= value;
   }
   return result;
 };

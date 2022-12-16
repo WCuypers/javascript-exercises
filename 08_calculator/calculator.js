@@ -29,8 +29,16 @@ const power = function(num1, num2) {
   return result;
 };
 
-const factorial = function() {
-	
+const factorial = function(num) {
+	if (num == 0) {
+    result = 1;
+  } else {
+    while (num > 1) {
+      num--;
+      result *= num;
+    }
+  }
+  return result;
 };
 
 // Do not edit below this line

@@ -30,12 +30,13 @@ const power = function(num1, num2) {
 };
 
 const factorial = function(num) {
-	if (num == 0) {
+  let result = num;
+  if (num == 0 || num == 1) {
     result = 1;
   } else {
-    while (num >= 1) {
-      result *= num;
+    while (num > 1) {
       num--;
+      result *= num;
     }
   }
   return result;

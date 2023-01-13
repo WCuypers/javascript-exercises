@@ -1,37 +1,19 @@
-const findTheOldest = function(array) {
-    const currentYear = 2022;
-    let age;
-    let oldest;
-        for (i = 0 ; i < array.length; i++) {    // for each element of the array
-            array[i].age = array[i].yearOfDeath - array[i].yearOfBirth; // store result in age variable
-            if (i > 0) {
-                oldest = Math.max(array[i].age, array[i-1].age);
-            } else {
-                continue;
-            }
+let findTheOldest = function(people) {
+    const currentYear = new Date().getFullYear();
+    const oldestPerson = people.reduce((winner, person) => {
+        if (((person.yearOfDeath || currentYear) - person.yearOfBirth) > ((winner.yearOfDeath || currentYear) - winner.yearOfBirth)) {
+            return person;
+        } else if (((person.yearOfDeath || currentYear) - person.yearOfBirth) <= ((winner.yearOfDeath || currentYear) - winner.yearOfBirth)) {
+            return winner;
         }
-    let arrayIndex = array.find(item => item.age === oldest);
-    return arrayIndex;    // return name linked to highest age variable
-};
+    });
 
-/*//FOR TESTING
-const people = [
-    {
-      name: "Carly",
-      yearOfBirth: 1942,
-      yearOfDeath: 1970,
-    },
-    {
-      name: "Ray",
-      yearOfBirth: 1962,
-      yearOfDeath: 2011,
-    },
-    {
-      name: "Jane",
-      yearOfBirth: 1912,
-      yearOfDeath: 1941,
-    },
-  ]
-console.log(findTheOldest(people));*/
-// Do not edit below this line
+    return oldestPerson;
+}
+
+const p1 = { yearOfBirth: 1990, yearOfDeath: 2015 }
+const p2 = { yearOfBirth: 1990 }
+
+console.log(findTheOldest([p1, p2]))
+
 module.exports = findTheOldest;
